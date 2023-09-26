@@ -14,6 +14,7 @@ export class StoresController {
     @Query('perPage') perPage: number,
   ) {
     const result = await this.storesService.findAll(page, perPage);
+    console.log(result);
     return {
       pagination: {
         page,
