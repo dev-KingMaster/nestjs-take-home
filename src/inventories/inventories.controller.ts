@@ -14,6 +14,7 @@ export class InventoriesController {
     @Query('perPage') perPage: number,
   ) {
     const result = await this.inventoriesService.findAll(page, perPage);
+    console.log(result);
     return {
       pagination: {
         page,
